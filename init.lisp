@@ -24,3 +24,4 @@
 ;; Use section (above TAB on qwertz keyboards) as the prefix key
 ;; Still not sure this is a viable option
 (set-prefix-key (kbd "section"))
+(define-key *root-map* (kbd "C-section") "send-escape")
