@@ -20,3 +20,7 @@
 
 ;; Run emacsclient on startup
 (emacsclient-launch)
+
+;; Use section (above TAB on qwertz keyboards) as the prefix key
+;; Still not sure this is a viable option
+(set-prefix-key (kbd "section"))
