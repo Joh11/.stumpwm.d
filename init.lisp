@@ -18,10 +18,15 @@
 (define-key *root-map* (kbd "e") "emacsclient-launch")
 (define-key *root-map* (kbd "C-e") "emacsclient-launch")
 
-;; Run emacsclient on startup
-(emacsclient-launch)
-
 ;; Use section (above TAB on qwertz keyboards) as the prefix key
 ;; Still not sure this is a viable option
 (set-prefix-key (kbd "section"))
 (define-key *root-map* (kbd "C-section") "send-escape")
+
+;; Setup firefox
+(defcommand firefox () ()
+  (run-shell-command "firefox"))
+(define-key *root-map* (kbd "f") "firefox")
+
+;; Run emacsclient on startup
+(emacsclient-launch)
